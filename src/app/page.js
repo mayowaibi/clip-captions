@@ -12,7 +12,7 @@ export default function Home() {
           </a>
       </header>
       <div className="text-center mt-16 mb-10">
-        <h1 className="text-3xl mb-3">
+        <h1 className="text-3xl mb-3" style={{textShadow: '1px 1px 0 rgba(0,0,0,0,.5'}}>
           Add captions to your clips
           </h1>
         <h2 className="text-white/75">
