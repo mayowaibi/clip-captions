@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Clip Captions
 
-## Getting Started
+## Description
+An application that can create automated, customizable captions for user-uploaded videos using Amazon's transcribe service.
 
-First, run the development server:
+<img width="700" alt="clip-captions-homepage" src="https://github.com/hmlm2001/Media-Vault-EECS2311/assets/66337024/b6cfae75-aa37-4342-a741-468ad9ac6a0a">
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## How It Works
+The application accepts user-uploaded videos and uploads them to a secure [AWS S3 bucket](https://aws.amazon.com/s3/).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The video is then transcribed using [Amazon Transcribe](https://aws.amazon.com/transcribe/) and a preview of the captions is shown with corresponding time stamps according to the video.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The user can choose to manually edit the captions and customize the primary and outline colours of the captions before applying them to the video.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+After the captions are applied, a new video is generated and stored in the S3 bucket before being available for the user to download on the site.
 
-## Learn More
+<img width="700" alt="clip-captions-transcription-page" src="https://github.com/hmlm2001/Media-Vault-EECS2311/assets/66337024/d1233f52-0034-4d93-8242-55176eb6cdf6">
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Frameworks and Libraries Used
+- Next.js
+- React.js
+- TailwindCSS
+- FFmpeg + WebAssembly
+- Uniqid
